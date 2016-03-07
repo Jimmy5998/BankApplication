@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bank Application</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default" style="margin-bottom: 0px">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Chase</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Credit Card <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/freedom">Chase Freedom® card</a></li>
+                        <li><a href="#/slate">Chase Slate®</a></li>
+                        <li><a href="#/prefer">Chase Sapphire Preferred® card</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Debit Card <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/saving">Saving Account</a></li>
+                        <li><a href="#/checking">Checking Account</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav navbar-nav navbar-right">
+                <img style="width: 230px; height: 50px" src="http://eckerconstruction.com/wp-content/uploads/2014/01/Chase.jpg">
+            </div>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container" style="padding: 0px">
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin-top: -20px">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="https://www.chase.com/content/services/structured-image/image.desktop.jpg/chase-ux/carousel/primary/auto-map.jpg" width="1000" height="345">
+                <div class="carousel-caption">
+                    <h3>Driver Away in You Dream Car</h3>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://www.chase.com/content/services/structured-image/image.desktop.jpg/chase-ux/carousel/primary/home-yard.jpg" width="1000" height="345">
+                <div class="carousel-caption">
+                    <h3>Lock in Law Rate Today</h3>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://www.chase.com/content/services/structured-image/image.desktop.jpg/chase-ux/carousel/primary/investment-couple.jpg"  width="1000" height="345">
+                <div class="carousel-caption">
+                    <h3>Let You Money Work For You</h3>
+                </div>
+            </div>
+
+            <div class="item">
+                <img src="https://www.chase.com/content/services/structured-image/image.desktop.jpg/chase-ux/carousel/primary/card_finder5.jpg"  width="1000" height="345">
+                <div class="carousel-caption">
+                    <h3>Choose The Right Card For You</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" id="left">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div ng-view></div>
+</body>
+</html>
